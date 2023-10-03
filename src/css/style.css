@@ -79,18 +79,18 @@ table {
     border-collapse: collapse;
 }
 
-.contact-table tr {
+#contact-table tr {
     height: 40px;
     border-top: thin solid whitesmoke;
     border-bottom: thin solid whitesmoke;
 }
 
-.contact-table tr:first-child {
+#contact-table tr:first-child {
     background-color: antiquewhite;
     border-top: none;
 }
 
-.contact-table tr:last-child {
+#contact-table tr:last-child {
     border-bottom: none;
 }
 
