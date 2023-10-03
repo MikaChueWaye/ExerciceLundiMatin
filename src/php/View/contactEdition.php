@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Edition</title>
   <link rel="stylesheet" type="text/css" href="../../css/style.css">
+  <script defer type="text/javascript" src="../../js/scriptEdition.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 </head>
@@ -44,7 +45,7 @@
         </tr>
       </table>
       <div id="edit-buttons">
-        <a id="cancel-button" href="#">Annuler</a>
+        <a id="cancel-button" onclick="retourInfo()">Annuler</a>
         <input id="save-button" type="submit" value="Enregistrer">
       </div>
     </form>

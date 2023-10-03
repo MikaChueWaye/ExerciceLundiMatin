@@ -14,5 +14,15 @@ class ControllerClient
         echo json_encode($clients);
     }
 
+    static function getClientById() {
+        $id = $_GET['id'];
+        $client = ModelClient::getClientById($id);
+        echo json_encode($client);
+    }
 
+//    static function search() {
+//        $nom = $_GET['nom'];
+//        $clients = ModelClient::searchClient($nom);
+//        echo json_encode($clients);
+//    }
 }

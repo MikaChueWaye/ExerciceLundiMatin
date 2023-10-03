@@ -41,4 +41,23 @@ class ModelClient
         }
         return $clientList;
     }
+
+    public static function searchClient($nom)
+    {
+        $chCli = curl_init();
+        $url = "https://evaluation-technique.lundimatin.biz/api/clients/nom=".$nom;
+        curl_setopt($chCli, CURLOPT_URL, $url);
+        curl_setopt($chCli, CURLOPT_CUSTOMREQUEST, "GET");
+        curl_setopt($chCli, CURLOPT_USERPWD, ":" . Conf::getToken());
+        curl_setopt($chCli, CURLOPT_RETURNTRANSFER, true);
+        $dataList = curl_exec($chCli);
+        curl_close($chCli);
+        $clientList = [];
+        if (isset($dataList['datas'])) {
+            foreach ($dataList['datas'] as $clientId) {
+                $clientList[] = self::getClientById($clientId['id']);
+            }
+        }
+        return $clientList;
+    }
 }

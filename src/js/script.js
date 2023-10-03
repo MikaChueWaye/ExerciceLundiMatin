@@ -19,13 +19,13 @@ function requeteAJAX(type, action, callback)
 
 function afficherClients(tableau)
 {
-
     tableau.forEach((item) => {
+        console.log(item);
         let client = JSON.parse(item);
         let tr = document.createElement('tr');
         tr.addEventListener("click", function (event)
         {
-            tr.remove();
+            consulterClient(client.datas.id);
         });
         let tdImg = document.createElement('td');
         let tdNom = document.createElement('td');
@@ -45,13 +45,18 @@ function afficherClients(tableau)
     });
 }
 
-function consulterClient()
+function consulterClient(id)
 {
-
+    location.replace("php/View/contactInfo.php?id=" + id);
 }
 
 function callbackClient(req)
 {
      let tab = JSON.parse(req.responseText);
      afficherClients(tab)
+}
+
+function rechercheClient()
+{
+    requeteAJAX("Client", "search", callbackClient);
 }
