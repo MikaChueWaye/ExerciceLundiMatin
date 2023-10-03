@@ -42,6 +42,7 @@ class ModelClient
         return $clientList;
     }
 
+    //en cours...
     public static function searchClient($nom)
     {
         $chCli = curl_init();
@@ -59,5 +60,18 @@ class ModelClient
             }
         }
         return $clientList;
+    }
+
+    public static function update($id, $datas)
+    {
+        $chCli = curl_init();
+        $url = "https://evaluation-technique.lundimatin.biz/api/clients/".$id."/".$datas;
+        curl_setopt($chCli, CURLOPT_URL, $url);
+        curl_setopt($chCli, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($chCli, CURLOPT_USERPWD, ":" . Conf::getToken());
+        curl_setopt($chCli, CURLOPT_RETURNTRANSFER, true);
+        $cliList = curl_exec($chCli);
+        curl_close($chCli);
+        return $cliList;
     }
 }

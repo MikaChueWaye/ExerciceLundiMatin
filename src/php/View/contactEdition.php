@@ -46,7 +46,7 @@
       </table>
       <div id="edit-buttons">
         <a id="cancel-button" onclick="retourInfo()">Annuler</a>
-        <input id="save-button" type="submit" value="Enregistrer">
+        <input id="save-button" type="submit" value="Enregistrer" onclick="miseAJour()">
       </div>
     </form>
   </div>
