@@ -34,6 +34,7 @@ function callbackInfo(req)
 //affiche les informations du client
 function afficherInfo(client)
 {
+    document.getElementById("nomContact").innerText = client.datas.nom;
     document.getElementById("name").value = client.datas.nom;
     document.getElementById("tel").value = client.datas.tel;
     document.getElementById("email").value = client.datas.email;
@@ -50,5 +51,12 @@ function retourInfo()
 
 function miseAJour()
 {
+    let url = "../Controller/Controller"+ encodeURIComponent(type) +".php?action="+ encodeURIComponent(action) +'&'+ $id +'&'+window.location.search.substr(1);
+    let requete = new XMLHttpRequest();
+    requete.open("POST", url, true);
 
+    requete.addEventListener("load", function () {
+        callback(requete);
+    });
+    requete.send(null);
 }

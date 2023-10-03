@@ -12,7 +12,7 @@
 <header><a href="../../index.html">Rechercher un contact</a></header>
 <main>
   <div class="page-title">
-    <p>nom contact</p>
+    <p id="nomContact">nom contact</p>
     <a class="button" id="edit-button" onclick="editer()">Editer</a>
   </div>
   <div>

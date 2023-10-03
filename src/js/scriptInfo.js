@@ -31,6 +31,7 @@ function callbackInfo(req)
 //affiche les informations du client
 function afficherInfo(client)
 {
+    document.getElementById("nomContact").innerText = client.datas.nom;
     document.getElementById("nom").innerText = client.datas.nom;
     document.getElementById("tel").innerText = client.datas.tel;
     document.getElementById("email").innerText = client.datas.email;
