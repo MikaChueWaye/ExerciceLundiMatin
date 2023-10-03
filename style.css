@@ -1,0 +1,95 @@
+* {
+    margin : 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Poppins;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: royalblue;
+    color: white;
+    padding-left:5vw;
+}
+
+main {
+    padding: 0 5vw 0 5vw;
+}
+
+main div {
+    background-color: white;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border-radius: 5px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-title p {
+    font-size: large;
+}
+
+#search-element {
+    padding: 0 25vw 0 25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#search-element * {
+    margin: 2px 0 2px 0;
+}
+
+.submit-button {
+    background-color: darkorange;
+    border-radius: 5px;
+    border-color: transparent;
+    color: white;
+    width: 150px;
+    height: 25px;
+    align-self: end;
+}
+
+.submit-button:hover {
+    border-color: whitesmoke;
+    background-color: #ff9108;
+}
+
+.submit-button:active {
+    background-color: darkorange;
+    border-color: transparent;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    height: 40px;
+    border-top: medium solid whitesmoke;
+    border-bottom: thin solid whitesmoke;
+}
+
+tr:first-child {
+    background-color: antiquewhite;
+    border-top: none;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td
+{
+    padding: 0 10px 0 10px;
+}
